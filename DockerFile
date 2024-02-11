@@ -2,4 +2,5 @@ FROM python:3.8
 WORKDIR /app
 COPY . /app
 RUN pip install -r requirements.txt
-CMD ["flask" , "rum" , "--host=0.0.0.0"]
+RUN pip install gunicorn  # Add this line
+CMD ["gunicorn", "app:app"]
