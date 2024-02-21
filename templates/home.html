@@ -17,7 +17,7 @@
 	<h1>Boston House Price Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
-     <form action="{{ url_for('predict') }}" method="post">
+     <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
         <input type="text" name="MedInc" placeholder="MedInc" required="required" /><br>
     	<input type="text" name="HouseAge" placeholder="HouseAge" required="required" /><br>
         <input type="text" name="AveRooms" placeholder="AveRooms" required="required" /><br>
